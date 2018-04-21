@@ -1,8 +1,16 @@
-# React Seed project for POC's and fast projects
-This seed repository is used as a seed project to build large projects based on react stack.
+# Smart bid - home exam
+smart bid home exam
 
-## License
+## Starting the app
+1. npm install
+2. npm run server
+
+## client side development
+1. npm install
+2. npm run dev
+
+### License
 MIT
 
-## Copy rights
+### Copy rights
 Tal Waserman
