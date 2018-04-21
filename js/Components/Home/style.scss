@@ -1,9 +1,31 @@
 .home-page {
-    h1 {
-        text-align: center;
+    section {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 10px 10px 24px;
+        margin-bottom: 30px;
     }
-    .bar-expand {
-        height: 100% !important;
+
+    .component {
+        border-top: 2px lightgray solid;
+        margin: 10px;
+        background: #fff;
+
+        .component-header {
+            line-height: 20px;
+            padding: 8px 10px 16px 10px;
+            border-bottom: 1px solid #eee;
+
+            label {
+                font-weight: 700;
+                color: gray;
+                font-size: 12px;
+            }
+        }
+
+        .component-info {
+            padding: 13px 10px 16px;
+        }
     }
 
 }

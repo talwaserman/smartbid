@@ -1,0 +1,51 @@
+.message-component {
+    max-width: 400px;
+    border-top: 0 !important;
+    margin: 0 15px !important;
+    border-bottom: 1px solid #eee;
+
+    .message-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 0 0;
+
+        label {
+            font-weight: 700;
+            color: gray;
+            font-size: 12px;
+        }
+
+        .fas, .far {
+            color: lightgray;
+            font-size: 12px;
+            margin-left: 10px;
+            vertical-align: middle;
+
+            .fa-angle-up {
+                font-size: 20px;
+            }
+        }
+
+        span {
+            color: gray;
+            font-size: 11px;
+            line-height: 20px;
+            border-radius: 3px;
+            padding: 0px 5px;
+        }
+    }
+
+    .message-info {
+        color: gray;
+        padding: 0 0 16px !important;
+
+        .email-teaser {
+            font-size: 12px;
+        }
+
+        .email-date {
+            font-size: 10px;
+            margin-top: 3px;
+        }
+    }
+}

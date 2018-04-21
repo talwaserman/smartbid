@@ -1,10 +1,6 @@
 require('./style.scss');
 import React, {Component} from 'react';
-import {bindActionCreators} from 'redux';
-import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
-import { BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar, ResponsiveContainer  } from 'recharts';
-import * as actionCreators from './actions';
+import { ComposedChart, Line, Area, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer  } from 'recharts';
 
 class Chart extends React.Component {
     constructor(props) {
@@ -13,28 +9,25 @@ class Chart extends React.Component {
 
     render() {
         return (
-            <div className="chart-component">
-                <ResponsiveContainer>
-                    <BarChart width={730} height={250} data={this.props.chartData}>
-                        <CartesianGrid strokeDasharray="3 3"/>
-                        <XAxis dataKey="name"/>
-                        <YAxis/>
-                        <Tooltip/>
-                        <Legend/>
-                        <Bar dataKey="pv" fill="#8884d8"/>
-                        <Bar dataKey="uv" fill="#82ca9d"/>
-                    </BarChart>
-                </ResponsiveContainer>
-
+            <div className="chart-component component">
+                <div className="component-header">
+                    <label>Orders</label>
+                </div>
+               
+                    <ResponsiveContainer>
+                        <ComposedChart width={300} height={250} data={this.props.chartData}>
+                            <CartesianGrid strokeDasharray="3 3"/>
+                            <XAxis dataKey="name"/>
+                            <YAxis/>
+                            <Tooltip/>
+                            <Legend verticalAlign="top"/>
+                            <Bar dataKey="number_of_orders" fill="darkturquoise"/>
+                            <Area type='monotone' dataKey='payments' fill='#8884d8' stroke='#8884d8'/>
+                        </ComposedChart>
+                    </ResponsiveContainer>
             </div>
         );
     }
 }
 
-const mapStateToProps = state => ({
-    userData: state.UserStatusReducer.userData, 
-    chartData: state.ChartReducer.chartData
-});
-const mapDispatchToProps = dispatch => () => bindActionCreators(actionCreators, dispatch);
-
-export default connect(mapStateToProps, mapDispatchToProps)(Chart);
+export default Chart;

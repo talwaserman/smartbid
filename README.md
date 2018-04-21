@@ -3,10 +3,6 @@ smart bid home exam
 
 ## Starting the app
 1. npm install
-2. npm run server
-
-## client side development
-1. npm install
 2. npm run dev
 
 ### License

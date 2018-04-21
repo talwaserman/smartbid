@@ -1,0 +1,38 @@
+.infoCard-component {
+    width: 100%;
+    max-width: 400px;
+
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+
+        span {
+            color: #fff;
+            border-radius: 3px;
+            padding: 0px 5px;
+            font-size: 11px;
+        }
+    }
+
+    .card-info {
+        .top-part {
+            font-size: 27px;
+            font-weight: 100;
+            color: gray;
+        }
+        .bottom-part {
+            display: flex;
+            justify-content: space-between;
+
+            label {
+                font-size: 12px;
+                color: gray;
+            }
+
+            span {
+                font-size: 12px;
+                font-weight: 700;
+            }
+        }
+    }
+}

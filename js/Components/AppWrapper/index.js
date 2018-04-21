@@ -11,8 +11,7 @@ class AppWrapper extends React.Component {
   render() {
     return (
       <div className="app-wrapper">
-        <Header/> {this.props.children}
-        <Footer/>
+        {this.props.children}
       </div>
     );
   }

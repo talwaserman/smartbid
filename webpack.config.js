@@ -6,7 +6,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
   context: __dirname,
   entry: [
-    'react-hot-loader/patch', 'webpack-dev-server/client?http://localhost:8080', 'webpack/hot/only-dev-server', './js/ClientApp.jsx'
+    'react-hot-loader/patch', 'webpack-dev-server/client?http://localhost:3000', 'webpack/hot/only-dev-server', './js/ClientApp.jsx'
   ],
   devtool: 'cheap-eval-source-map',
   output: {
@@ -16,6 +16,7 @@ module.exports = {
   },
   devServer: {
     hot: true,
+    port: 3000,
     publicPath: '/public/',
     historyApiFallback: {
       rewrites: [
